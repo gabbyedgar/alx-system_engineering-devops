@@ -1,3 +1,2 @@
 #!/bin/bash
-Hello, World >stdoutput.txt
-
+"Hello, World\n" >stdoutput.txt
