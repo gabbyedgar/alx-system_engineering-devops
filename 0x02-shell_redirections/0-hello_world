@@ -1,2 +1,2 @@
 #!/bin/bash
-"Hello, World\n" >0-hello_world.txt
+cat "Hello, World\n" 
