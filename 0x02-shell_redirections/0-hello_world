@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello, World\n" >0-hello_world
+"Hello, World\n" >0-hello_world.txt
