@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#  Create temporary file with PID of this script and handle SIGTERM and
+#+ SIGINT. If received SIGTERM or SIGQUIT delete temporary file.
+
+echo "$$" > /var/run/holbertonscript.pid
+trap 'echo I hate the kill command; rm /var/run/holbertonscript.pid; kill -9 $$' SIGTERM SIGQUIT
+trap 'echo "Y U no love me?!"' SIGINT
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

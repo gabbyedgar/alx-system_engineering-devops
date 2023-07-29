@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Kill script called `4-to_infinity_and_beyond` using kill command
+
+kill -SIGTERM "$(pgrep -f 4-to_infinity_and_beyond)"

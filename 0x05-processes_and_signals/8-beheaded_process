@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Send SIGKILL to `7-highlander`
+
+pkill -f -SIGKILL 7-highlander

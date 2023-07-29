@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Display info about processes with bash in their name
+# shellcheck disable=SC2009
+
+ps -eo user,pid,%cpu,%mem,vsz,rss,tname,stat,start_time,bsdtime,args --forest |\
+ grep bash
