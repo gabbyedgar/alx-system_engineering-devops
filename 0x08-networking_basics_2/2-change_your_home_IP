@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Change localhost to 127.0.0.2 and alias facebook to 8.8.8.8 using hosts file
+cp /etc/hosts ~/hosts.tmp
+sed -i 's/127\.0\.0\.1/127\.0\.0\.2/' ~/hosts.tmp
+echo >> ~/hosts.tmp
+echo -e '8.8.8.8\tfacebook.com' >> ~/hosts.tmp
+cat ~/hosts.tmp > /etc/hosts
+rm ~/hosts.tmp

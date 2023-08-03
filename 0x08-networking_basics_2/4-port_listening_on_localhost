@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Create a server listening on port 98
+nc -l 98
