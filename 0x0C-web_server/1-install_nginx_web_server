@@ -1,33 +1,7 @@
 #!/usr/bin/env bash
-# Install and setup new nginx server
-
-apt-get update -y && \
-apt-get install -y nginx
-if [ $? -eq 0 ]
-then
-    echo -e \
-"http {
-    root /var/www/holberton;
-    index index.html;
-    server {
-        listen 80;
-        location \ {
-        }
-    }
-}
-events {
-}" > /etc/nginx/nginx.conf
-    mkdir -p /var/www/holberton
-    echo "hello Holberton School" > \
-	/var/www/holberton/index.html
-    service nginx start
-    if [ $? -ne 0 ]
-    then
-	"Problem starting nginx"
-	exit 1
-    fi
-else
-    echo "Could not install nginx"
-    exit 1
-fi
-exit 0
+# Install nginx and start it
+apt-get -y install nginx
+service nginx start
+ufw allow 'Nginx HTTP'
+echo "Holberton School\n" | sudo tee /var/www/html/index.nginx-debian.html
+service nginx restart
